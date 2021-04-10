@@ -1,0 +1,25 @@
+<html> 
+    <body>
+        <h1><%= validacao[0].length %></h1>
+
+        <% if(validacao.length > 0){ %>
+            <div class="alert alert-danger">
+                <strong>Atenção</strong> 
+            </div>  
+            <ul>
+                
+                    <li><%= validacao %></li>
+            
+            </ul>        
+        <% }  else { %>
+            <div class="alert alert-danger">
+                <strong>Atenção else</strong> 
+            </div>
+               
+        <% } %>     
+        <br>
+        <h1>
+              Pressone ENTER para prosseguir!!!!
+        </h1>
+    </body>
+</html>
