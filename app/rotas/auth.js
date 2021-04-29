@@ -13,6 +13,8 @@ module.exports=function(application){
 
     application.post('/auth_cript',function(req,res)
     {
+          //console.log(req.headers); 
+    
         application.app.controllers.authController.gera_pwd_cripto(application,req,res);
     });    
     
