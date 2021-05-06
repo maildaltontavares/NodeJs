@@ -3,10 +3,13 @@ var crypto = require('crypto');
 const consts = require('../../consts.js');
 const jwt = require('jsonwebtoken');    
 //const app = require('../../config/server.js');
+//const ctrl = require("../../app/controllers/authController.js") ;
+const app = require("../../app/controllers/authController.js") ;
 //Excluir
 
 module.exports=function(application){ 
  
+    
 
     application.get('/auth_jwt',function(req,res)
     {  
