@@ -19,9 +19,31 @@ module.exports=function(application){
     {
         //console.log(req.headers); 
        // console.log("req.headers"); 
-        res.send('<html><body>Arquivos BD</body></html>');
-        //application.app.controllers.authController.gera_pwd_cripto(application,req,res);
+         
+        application.app.controllers.authController.gera_pwd_cripto(application,req,res);
     });    
+
+    application.get('/teste',function(req,res)
+    {
+
+        //console.log(req.headers); 
+        //console.log("req.headers");         
+        res.send('<html><body>Arquivos BD123</body></html>');
+        try {
+            var token = jwt.sign({ foo: 'bar' }, consts.keyJWT,{expiresIn: consts.expiresJWT});   
+            //console.log(token);
+            //let token = jwt.sign({_id: user._id}, consts.keyJWT,{expiresIn: consts.expiresJWT}); 
+            return res.status(200).json({message: token}); 
+        }
+        catch(e) {
+            res.status(500).json({message: 'Erro na execução', error: e});
+        }   
+        res.send('<html><body>Arquivos BD456</body></html>');
+
+
+
+        //application.app.controllers.authController.gera_token(application,req,res);
+    }); 
     
 
 }
