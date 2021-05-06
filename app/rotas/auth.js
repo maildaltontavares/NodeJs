@@ -5,11 +5,13 @@ const jwt = require('jsonwebtoken');
 //const app = require('../../config/server.js');
 //const ctrl = require("../../app/controllers/authController.js") ;
 const app = require("../../app/controllers/authController.js") ;
+const testeApi = require("../../app/controllers/funcoes.js") ;
 //Excluir
 
 module.exports=function(application){ 
  
     
+    application.get('/teste1',testeApi.teste);
 
     application.get('/auth_jwt',function(req,res)
     {  
