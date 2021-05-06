@@ -13,8 +13,8 @@ app.use(bodyparser.json());
 app.use(cors());
 
 consign()
-.include("./app/rotas") 
-.then("./app/controllers")
+.include("./app/controllers") 
+.then("./app/rotas")  
 .into(app);  
  
 
