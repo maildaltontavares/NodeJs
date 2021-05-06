@@ -13,6 +13,10 @@ module.exports=function(application){
     
     application.get('/teste1',testeApi.teste);
 
+    application.get('/gt',testeApi.gerar_token);
+
+    application.post('/gc',testeApi.gerar_pwd_cripto);
+
     application.get('/auth_jwt',function(req,res)
     {  
         //console.log(req.headers);  
