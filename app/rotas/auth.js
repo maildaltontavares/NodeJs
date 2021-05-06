@@ -2,13 +2,14 @@
 var crypto = require('crypto');
 const consts = require('../../consts.js');
 const jwt = require('jsonwebtoken');    
+//const app = require('../../config/server.js');
 //Excluir
 
 module.exports=function(application){ 
  
 
     application.get('/auth_jwt',function(req,res)
-    { 
+    {  
         //console.log(req.headers);  
         application.app.controllers.authController.gera_token(application,req,res);
     });    
